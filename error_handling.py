@@ -6,7 +6,7 @@ def exception_handler(func):
     """
 
     def inner_function(*args, **kwargs):
-        """
+        """Exception handling function
 
         :param args:    positional arguments
         :param kwargs:  key arguments
@@ -14,7 +14,7 @@ def exception_handler(func):
         """
         try:
             func(*args, **kwargs)
-        except (TypeError, ValueError):
+        except ValueError:
             print(f"{func.__name__} only takes numbers as the argument")
 
     return inner_function
