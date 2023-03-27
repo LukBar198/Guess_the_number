@@ -14,7 +14,7 @@ def exception_handler(func):
         """
         try:
             func(*args, **kwargs)
-        except TypeError:
+        except (TypeError, ValueError):
             print(f"{func.__name__} only takes numbers as the argument")
 
     return inner_function
