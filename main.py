@@ -4,6 +4,10 @@ from random import randint
 
 @exception_handler
 def guess_number():
+    """Gues the number The GAME
+
+    :return:
+    """
     computer_number = randint(1, 100)
     # print(f"Wylosowana liczba: {computer_number}")
 
